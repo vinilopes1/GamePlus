@@ -1,0 +1,11 @@
+<div>
+  <h3>Adicionar Novo Game</h3>
+</div>
+<form class="example-container" [formGroup]="gameForm" (ngSubmit)="addGame(gameForm.value)" >
+  <mat-form-field style="width: 100%">
+    <input matInput name="name" placeholder="Nome do Game" formControlName="name">
+  </mat-form-field>
+  <p></p>
+ 
+  <button type="submit" [disabled]="!gameForm.valid" mat-button color="primary">Adicionar</button>
+</form>
